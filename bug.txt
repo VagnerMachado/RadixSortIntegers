@@ -1,0 +1,97 @@
+
+
+*** Vagner's Project 2 Debugging***
+
+
+*** Below is the constructed Stack ***
+Top -> (539, 1227) -> (571, 548) -> (437, 541) -> (1271, 856) -> (1287, 565) -> (6908, 893) -> (1272, 541) -> (626, 557) -> (0, 659) -> (758, 540) -> (1356, 538) -> (2253, 555) -> (745, 4714) -> (546, 536) -> (1873, 544) -> (1318, 534) -> (524, 1234) -> (568, 623) ->  NULL
+
+ *** Table 0 ***
+Front (0) -> (0, 540) ->  NULL
+Tail  (0) -> (540, NULL) ->
+Front (1) -> (571, 541) -> (1271, 541) ->  NULL
+Tail  (1) -> (541, NULL) ->
+Front (2) -> (1272, NULL) ->  NULL
+Tail  (2) -> (1272, NULL) ->
+Front (3) -> (893, 2253) -> (1873, 623) ->  NULL
+Tail  (3) -> (623, NULL) ->
+Front (4) -> (4714, 544) -> (534, 524) -> (1234, NULL) ->  NULL
+Tail  (4) -> (1234, NULL) ->
+Front (5) -> (565, 555) -> (745, NULL) ->  NULL
+Tail  (5) -> (745, NULL) ->
+Front (6) -> (856, 626) -> (1356, 546) -> (536, NULL) ->  NULL
+Tail  (6) -> (536, NULL) ->
+Front (7) -> (1227, 437) -> (1287, 557) ->  NULL
+Tail  (7) -> (557, NULL) ->
+Front (8) -> (548, 6908) -> (758, 538) -> (1318, 568) ->  NULL
+Tail  (8) -> (568, NULL) ->
+Front (9) -> (539, 659) ->  NULL
+Tail  (9) -> (659, NULL) ->
+
+ *** Table 1 ***
+Front (0) -> (0, 6908) ->  NULL
+Tail  (0) -> (6908, NULL) ->
+Front (1) -> (4714, 1318) ->  NULL
+Tail  (1) -> (1318, NULL) ->
+Front (2) -> (623, 524) -> (626, 1227) ->  NULL
+Tail  (2) -> (1227, NULL) ->
+Front (3) -> (534, 1234) -> (536, 437) -> (538, 539) ->  NULL
+Tail  (3) -> (539, NULL) ->
+Front (4) -> (540, 541) -> (541, 544) -> (745, 546) -> (548, NULL) ->  NULL
+Tail  (4) -> (548, NULL) ->
+Front (5) -> (2253, 555) -> (856, 1356) -> (557, 758) -> (659, NULL) ->  NULL
+Tail  (5) -> (659, NULL) ->
+Front (6) -> (565, 568) ->  NULL
+Tail  (6) -> (568, NULL) ->
+Front (7) -> (571, 1271) -> (1272, 1873) ->  NULL
+Tail  (7) -> (1873, NULL) ->
+Front (8) -> (1287, NULL) ->  NULL
+Tail  (8) -> (1287, NULL) ->
+Front (9) -> (893, NULL) ->  NULL
+Tail  (9) -> (893, NULL) ->
+
+ *** Table 0 ***
+Front (0) -> (0, NULL) ->  NULL
+Tail  (0) -> (0, NULL) ->
+Front (2) -> (1227, 1234) -> (2253, 1271) -> (1272, 1287) ->  NULL
+Tail  (2) -> (1287, NULL) ->
+Front (3) -> (1318, 1356) ->  NULL
+Tail  (3) -> (1356, NULL) ->
+Front (4) -> (437, NULL) ->  NULL
+Tail  (4) -> (437, NULL) ->
+Front (5) -> (524, 534) -> (536, 538) -> (539, 540) -> (541, 541) -> (544, 546) -> (548, 555) -> (557, 565) -> (568, 571) ->  NULL
+Tail  (5) -> (571, NULL) ->
+Front (6) -> (623, 626) -> (659, NULL) ->  NULL
+Tail  (6) -> (659, NULL) ->
+Front (7) -> (4714, 745) -> (758, NULL) ->  NULL
+Tail  (7) -> (758, NULL) ->
+Front (8) -> (856, 1873) -> (893, NULL) ->  NULL
+Tail  (8) -> (893, NULL) ->
+Front (9) -> (6908, NULL) ->  NULL
+Tail  (9) -> (6908, NULL) ->
+
+ *** Table 1 ***
+Front (0) -> (0, 437) -> (524, 534) -> (536, 538) -> (539, 540) -> (541, 541) -> (544, 546) -> (548, 555) -> (557, 565) -> (568, 571) -> (623, 626) -> (659, 745) -> (758, 856) -> (893, NULL) ->  NULL
+Tail  (0) -> (893, NULL) ->
+Front (1) -> (1227, 1234) -> (1271, 1272) -> (1287, 1318) -> (1356, 1873) ->  NULL
+Tail  (1) -> (1873, NULL) ->
+Front (2) -> (2253, NULL) ->  NULL
+Tail  (2) -> (2253, NULL) ->
+Front (4) -> (4714, NULL) ->  NULL
+Tail  (4) -> (4714, NULL) ->
+Front (6) -> (6908, NULL) ->  NULL
+Tail  (6) -> (6908, NULL) ->
+
+** Processed 36 integers **
+
+** Offset:  532 **
+
+** Largest Number:  6376 **
+
+** Largest number plus offSet:  6908 **
+
+** Largest number plus offSet have:  4 digits **
+
+
+***    THE SORTING WAS SUCCESSFUL   ***
+
