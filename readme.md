@@ -1,9 +1,11 @@
 
-Argumets needed for the program:
+Arguments needed for the program:
 
 argv[1] - an input text file with positive and/or negative numbers thta can be in different rows.
 argv[2] - an output text file that will contain the iteration of the sort
 argv[3] - an output file that will contain the sorted integers
+
+The ourput files have the results for data set 2
 
 
 
