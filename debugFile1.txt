@@ -1,0 +1,87 @@
+
+
+*** Vagner's Project 2 Debugging***
+
+
+*** Below is the constructed Stack ***
+Top -> (6, 568) -> (95, 8) -> (702, 16) -> (95, 4) -> (739, 322) -> (91, 388) -> (213, 2255) -> (637, 361) -> (730, 29) -> (538, 127) -> (14, 133) -> (12, 9999) -> (8, 702) -> (322, 19) ->  NULL
+
+ *** Table 0 ***
+Front (0) -> (730, NULL) ->  NULL
+Tail  (0) -> (730, NULL) ->
+Front (1) -> (91, 361) ->  NULL
+Tail  (1) -> (361, NULL) ->
+Front (2) -> (702, 322) -> (12, 702) -> (322, NULL) ->  NULL
+Tail  (2) -> (322, NULL) ->
+Front (3) -> (213, 133) ->  NULL
+Tail  (3) -> (133, NULL) ->
+Front (4) -> (4, 14) ->  NULL
+Tail  (4) -> (14, NULL) ->
+Front (5) -> (95, 95) -> (2255, NULL) ->  NULL
+Tail  (5) -> (2255, NULL) ->
+Front (6) -> (6, 16) ->  NULL
+Tail  (6) -> (16, NULL) ->
+Front (7) -> (637, 127) ->  NULL
+Tail  (7) -> (127, NULL) ->
+Front (8) -> (568, 8) -> (388, 538) -> (8, NULL) ->  NULL
+Tail  (8) -> (8, NULL) ->
+Front (9) -> (739, 29) -> (9999, 19) ->  NULL
+Tail  (9) -> (19, NULL) ->
+
+ *** Table 1 ***
+Front (0) -> (702, 702) -> (4, 6) -> (8, 8) ->  NULL
+Tail  (0) -> (8, NULL) ->
+Front (1) -> (12, 213) -> (14, 16) -> (19, NULL) ->  NULL
+Tail  (1) -> (19, NULL) ->
+Front (2) -> (322, 322) -> (127, 29) ->  NULL
+Tail  (2) -> (29, NULL) ->
+Front (3) -> (730, 133) -> (637, 538) -> (739, NULL) ->  NULL
+Tail  (3) -> (739, NULL) ->
+Front (5) -> (2255, NULL) ->  NULL
+Tail  (5) -> (2255, NULL) ->
+Front (6) -> (361, 568) ->  NULL
+Tail  (6) -> (568, NULL) ->
+Front (8) -> (388, NULL) ->  NULL
+Tail  (8) -> (388, NULL) ->
+Front (9) -> (91, 95) -> (95, 9999) ->  NULL
+Tail  (9) -> (9999, NULL) ->
+
+ *** Table 0 ***
+Front (0) -> (4, 6) -> (8, 8) -> (12, 14) -> (16, 19) -> (29, 91) -> (95, 95) ->  NULL
+Tail  (0) -> (95, NULL) ->
+Front (1) -> (127, 133) ->  NULL
+Tail  (1) -> (133, NULL) ->
+Front (2) -> (213, 2255) ->  NULL
+Tail  (2) -> (2255, NULL) ->
+Front (3) -> (322, 322) -> (361, 388) ->  NULL
+Tail  (3) -> (388, NULL) ->
+Front (5) -> (538, 568) ->  NULL
+Tail  (5) -> (568, NULL) ->
+Front (6) -> (637, NULL) ->  NULL
+Tail  (6) -> (637, NULL) ->
+Front (7) -> (702, 702) -> (730, 739) ->  NULL
+Tail  (7) -> (739, NULL) ->
+Front (9) -> (9999, NULL) ->  NULL
+Tail  (9) -> (9999, NULL) ->
+
+ *** Table 1 ***
+Front (0) -> (4, 6) -> (8, 8) -> (12, 14) -> (16, 19) -> (29, 91) -> (95, 95) -> (127, 133) -> (213, 322) -> (322, 361) -> (388, 538) -> (568, 637) -> (702, 702) -> (730, 739) ->  NULL
+Tail  (0) -> (739, NULL) ->
+Front (2) -> (2255, NULL) ->  NULL
+Tail  (2) -> (2255, NULL) ->
+Front (9) -> (9999, NULL) ->  NULL
+Tail  (9) -> (9999, NULL) ->
+
+** Processed 28 integers **
+
+** Offset:  0 **
+
+** Largest Number:  9999 **
+
+** Largest number plus offSet:  9999 **
+
+** Largest number plus offSet have:  4 digits **
+
+
+***    THE SORTING WAS SUCCESSFUL   ***
+
