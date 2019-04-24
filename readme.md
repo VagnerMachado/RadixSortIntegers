@@ -1,3 +1,5 @@
+**      There are three input and output files provided as sample **
+
 
 Arguments needed for the program:
 
