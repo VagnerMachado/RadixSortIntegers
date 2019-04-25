@@ -289,12 +289,18 @@ listNode LLQ::deleteHead()
 		return listNode(head->data);
 }
 
-
+/**
+ * isEmpty - returns true if queue is empty and false otherwise
+ */
 bool LLQ::isEmpty()
 {
 	return head == tail;
 }
 
+/**
+ * printQueue - prints the queue to console
+ * coded this manner to comply with requirements
+ */
 void LLQ::printQueue(int index)
 {
 
@@ -325,6 +331,10 @@ void LLQ::printQueue(int index)
 	}
 }
 
+/**
+ * printQueue - prints the queue to file stream passed as parameter
+ * coded this manner to comply with requirements
+ */
 void LLQ::printQueue(int index, ofstream &out)
 {
 
@@ -358,6 +368,10 @@ void LLQ::printQueue(int index, ofstream &out)
  * RadixSort Methods
  *****************************************************************/
 
+/**
+ * firstReading - reads the inputs to figure the largest number and
+ * the offset case there are negative numbers
+ */
 void RadixSort::firstReading(ifstream &inFile, int &maxD, int &off)
 { //cannot figure out why we need the int parameters
 	int negativeNum = 0;
@@ -379,6 +393,10 @@ void RadixSort::firstReading(ifstream &inFile, int &maxD, int &off)
 	maxD = maxDigits; //case wanna use on main?
 }
 
+/**
+ * loadStack - reads the integers in the ifstream, creates a list NOde with
+ * each value and add to a stack. Prints the stack values to a ofstream
+ */
 void RadixSort::loadStack (ifstream &inFile, ofstream &out, LLStack * top)
 {
 	int data;
@@ -395,6 +413,10 @@ void RadixSort::loadStack (ifstream &inFile, ofstream &out, LLStack * top)
 	cout << "\n";
 }
 
+/**
+ * dumpStack - uses the integers in the stack by adding each one of them
+ * to the table based on the radix digit.
+ */
 void RadixSort::dumpStack(LLStack * top, ofstream &out, int curDigit, int curTable)
 {
 	while(!top->isEmpty())
@@ -408,11 +430,17 @@ void RadixSort::dumpStack(LLStack * top, ofstream &out, int curDigit, int curTab
 	this->printTable(curTable, out);
 }
 
+/**
+ * tableIndex - accessor for the table index being used currently
+ */
 int RadixSort::tableIndex()
 {
 	return currentQueue;
 }
 
+/**
+ * getMaxDigits -  returns the length of longest integer
+ */
 int RadixSort::getMaxDigits(int digit)
 {
 	stringstream v;
@@ -420,6 +448,11 @@ int RadixSort::getMaxDigits(int digit)
 	return v.str().length();
 }
 
+
+/**
+ * getDigit - accessor for the digit in an integer based on the iteration
+ * returns the digit needed to perform radix sort
+ */
 int RadixSort::getDigit(listNode node, int &x)
 {
 	int y = 0;
@@ -431,11 +464,18 @@ int RadixSort::getDigit(listNode node, int &x)
 	return data % 10;
 }
 
+/**
+ * hashIndex - accessor for the currentDigit instance data
+ */
 int RadixSort::hashIndex()
 {
 	return currentDigit;
 }
 
+/**
+ * RadixSort Constructor - initializes variables needed to
+ * perform the radix sort
+ */
 RadixSort::RadixSort()
 {
 	hashTable = new LLQ * [2];
@@ -452,6 +492,9 @@ RadixSort::RadixSort()
 	}
 }
 
+/**
+ * radixSort - uses the integer radix to sort them
+ */
 void RadixSort::radixSort(LLStack * stack, ofstream &out)
 {
 	dumpStack(stack, out, currentDigit, currentTable);
@@ -481,6 +524,10 @@ void RadixSort::radixSort(LLStack * stack, ofstream &out)
 		currentDigit++;
 	}
 }
+
+/**
+ * printTable - prints a table (1 or 0) passed as parameter to console
+ */
 void RadixSort::printTable(int curTable)
 {
 	cout << "\n *** Table " << curTable << " ***\n";
@@ -489,6 +536,10 @@ void RadixSort::printTable(int curTable)
 			hashTable[curTable][j].printQueue(j);
 }
 
+/**
+ * printTable - prints a table (1 or 0) passed as parameter to the file stream
+ * also passed as parameter
+ */
 void RadixSort::printTable(int curTable, ofstream &out)
 {
 	out << "\n *** Table " << curTable << " ***\n";
@@ -497,6 +548,9 @@ void RadixSort::printTable(int curTable, ofstream &out)
 			hashTable[curTable][j].printQueue(j, out);
 }
 
+/**
+ * output - outputs the sorted integers to the file stream passed as parameter
+ */
 void RadixSort::output(ofstream &outfile, ofstream &debug)
 {
 	int min = INT_MIN;
