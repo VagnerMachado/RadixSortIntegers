@@ -136,6 +136,9 @@ listNode::listNode(int x)
 	next = NULL;
 }
 
+/**
+ * listNode default constructor
+ */
 listNode::listNode()
 {
 	data = 0;
@@ -146,11 +149,20 @@ listNode::listNode()
 /*****************************************************************
  * LLStack Methods
  *****************************************************************/
+
+/**
+ * stack constructor
+ */
 LLStack::LLStack()
 {
 	top = NULL;
 }
 
+/**
+ * push - pushes a node onto the stack
+ * creates dynamic node with the data in node passed as parameter
+ * coded in this manner to comply with guidelines provided
+ */
 void LLStack::push(listNode newNode)
 {
 	listNode * temp = new listNode(newNode.data);
@@ -163,6 +175,9 @@ void LLStack::push(listNode newNode)
 		top = temp;
 }
 
+/**
+ * pop - removes the top item fromthe stack, returns a listNode
+ */
 listNode LLStack::pop()
 {
 	listNode a(top->data);
@@ -170,11 +185,18 @@ listNode LLStack::pop()
 	return a;
 }
 
+/**
+ * isEmpty - verifies if the stack is empty
+ * return true if empty, false otherwise
+ */
 bool LLStack::isEmpty()
 {
 	return top == NULL;
 }
 
+/**
+ * printStack - prints the stack in the console
+ */
 void LLStack::printStack()
 {
 	listNode * x = top;
@@ -194,6 +216,10 @@ void LLStack::printStack()
 	cout << " NULL\n";
 }
 
+
+/**
+ * printStack - pritns the stack to file stream passed as parameter
+ */
 void LLStack::printStack(ofstream &out)
 {
 	listNode * x = top;
@@ -216,6 +242,10 @@ void LLStack::printStack(ofstream &out)
 /*****************************************************************
  * LLQ Methods
  *****************************************************************/
+
+/**
+ * queue constructor - contains a dummy node
+ */
 LLQ::LLQ()
 {
 	listNode * dum = new listNode(9999);
@@ -223,6 +253,12 @@ LLQ::LLQ()
 	tail = dum;
 }
 
+/**
+ * add a list node to the tail.
+ * tail node is created from data in node passed as parameter
+ * coded in this manner to comply with requirements given.
+ *
+ */
 void LLQ::addTail(listNode x)
 {
 	listNode * temp = new listNode(x.data);
@@ -230,6 +266,11 @@ void LLQ::addTail(listNode x)
 	tail = temp;
 }
 
+/**
+ * deleteHead - deletes the head of the queue
+ * returns a listNode instantiated with data from deleted node
+ * coded this way to comply with requirements
+ */
 listNode LLQ::deleteHead()
 {
 	if(head != tail)
@@ -247,6 +288,7 @@ listNode LLQ::deleteHead()
 	else
 		return listNode(head->data);
 }
+
 
 bool LLQ::isEmpty()
 {
